@@ -1,0 +1,192 @@
+/* root sudo*/
+:root {
+  font-size: 16px;
+  font-family: "Gill Sans";
+  --text-primary: #e7a0a0;
+  --text-secondary: #ffffff;
+  --bg-primary: #cceed9;
+  --bg-secondary: #ffbed4;
+  --transition-speed: 300ms;
+}
+body {
+  background-color: rgb(255, 255, 255);
+  margin: top 20px;
+  padding: 8vh;
+  margin: bottom 10px;
+  font-size: 2vh;
+}
+/* Scrollbar */
+body::-webkit-scrollbar {
+  width: 2rem;
+}
+body::-webkit-scrollbar-track {
+  background: #f09e9e79;
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.3);
+  box-shadow: inherit;
+}
+body::-webkit-scrollbar-thumb {
+  background: #c9eed8;
+  outline: 100px solid rgba(255, 6, 222, 0.075);
+}
+/* Scrollbar */
+
+main {
+  margin-left: 10rem;
+  padding: 3rem;
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+.navbar {
+  position: fixed;
+  background-color: var(--bg-primary);
+  transition: width 500ms ease;
+  width: 20rem;
+  height: 100vh;
+}
+
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 25;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  box-shadow: 2px 2px 2px 1px rgb(233, 233, 233);
+}
+
+.nav-item {
+  width: 100%;
+}
+
+.nav-item:last-child {
+  margin-top: auto;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  height: 6rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  color: rgb(54, 54, 54);
+  opacity: (100%);
+  transition: var(--transition-speed);
+}
+
+.nav-link:hover {
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+}
+.link-text {
+  display: none;
+  margin-left: 0.1rem;
+}
+
+.nav-link svg {
+  width: 2rem;
+  min-width: 6rem;
+  margin: 0 1.3rem;
+}
+.nav-link:hover {
+  filter: grayscale(10%) opacity(30);
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+}
+
+.navbar:hover {
+  width: 0rem;
+}
+
+.navbar:hover .link-text {
+  display: block;
+  text-decoration: none;
+}
+
+.nav-item {
+  width: 100%;
+}
+
+.logo {
+  margin-bottom: 4.5rem;
+  text-align: center;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  letter-spacing: 1.3ch;
+  width: 100%;
+  padding-top: 76px;
+}
+
+.logo svg {
+  transform: rotate(0deg);
+  transform: scale(180%);
+  transition: var(--transition-speed);
+}
+
+@media only screen and (min-width: 700px) {
+  .navbar {
+    top: 0;
+    width: 9rem;
+    height: 100vh;
+  }
+}
+.navbar:hover {
+  width: 9rem;
+}
+
+.navbar:hover .link-text {
+  display: inline;
+  transition: opacity var(--transition-speed);
+}
+
+/* Small screens */
+@media only screen and (max-width: 700px) {
+  .navbar {
+    bottom: 0;
+    width: 0vw;
+    height: 5rem;
+    padding-bottom: 5vh;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+  }
+
+  .nav-link {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    color: var(--text-primary);
+    text-decoration: none;
+  }
+
+  main {
+    margin: 0;
+  }
+}
+
+/* Centering Lottie Animations */
+lottie-player {
+  margin: -5vh;
+}
+
+/* COPYRIGHT BOTTOM */
+.legal {
+  color: rgb(170, 170, 170);
+  display: block;
+  transition-property: color;
+  transition-duration: 90ms;
+}
+
+.legal:hover {
+  color: rgb(140, 201, 154);
+}
